@@ -11,6 +11,5 @@ public class GameScore
     public static void ModifyScore(int value)
     {
         Score += value;
-        Debug.Log(Score);
     }
 }
