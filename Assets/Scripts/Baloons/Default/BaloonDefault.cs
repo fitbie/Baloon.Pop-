@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BaloonDefault : BaloonBase
@@ -15,6 +13,8 @@ public class BaloonDefault : BaloonBase
     {
         base.Kill();
         // Add points
+
+        Vibration.Vibrate(200);
         GameObject.Destroy(gameObject);
     }
 
