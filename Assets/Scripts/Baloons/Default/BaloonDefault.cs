@@ -12,7 +12,8 @@ public class BaloonDefault : BaloonBase
     public override void Kill()
     {
         base.Kill();
-        // Add points
+        
+        GameScore.ModifyScore(scorePointsModificator.ScoreReward);
 
         Vibration.Vibrate(200);
         GameObject.Destroy(gameObject);
@@ -30,7 +31,9 @@ public class BaloonDefault : BaloonBase
     public override void Die()
     {
         base.Die();
-        // Remove points
+        
+        GameScore.ModifyScore(scorePointsModificator.ScorePenalty);
+
         GameObject.Destroy(gameObject);
     }
 
