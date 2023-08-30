@@ -62,6 +62,9 @@ public abstract class BaloonBase : MonoBehaviour
     public BaloonsEvents baloonsEvents = new BaloonsEvents();
 
 
+    public virtual void OnEnable() { CurrentBaloons.AddBaloon(this); }
+
+
     public void OnMouseDown()
     {
         Pop();
@@ -80,4 +83,8 @@ public abstract class BaloonBase : MonoBehaviour
     public virtual void Flew() { baloonsEvents.onFlew?.Invoke(); }
 
     public virtual void Die() { baloonsEvents.onDie?.Invoke(); }
+
+
+    public virtual void OnDisable() { CurrentBaloons.RemoveBaloon(this); }
+    
 }
