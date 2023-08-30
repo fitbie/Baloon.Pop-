@@ -4,33 +4,37 @@ using UnityEngine;
 
 public class BaloonDefault : BaloonBase
 {
-    public override int Health { get; set; }
-    public override float SpeedModificator { get; set; }
-
-
-
-    public override void Die()
+    public void Start()
     {
-        throw new System.NotImplementedException();
+        health.SetHealth();
+    }
+    
+
+    public override void Kill()
+    {
+        base.Kill();
+        // Add points
+        GameObject.Destroy(gameObject);
     }
 
 
     public override void Flew()
     {
-        throw new System.NotImplementedException();
+        base.Flew();
+
+        Die();
     }
 
 
-    public override void Kill()
+    public override void Die()
+    {
+        base.Die();
+        // Remove points
+        GameObject.Destroy(gameObject);
+    }
+
+    public override void Initialize()
     {
         throw new System.NotImplementedException();
     }
-
-
-    public override void Pop()
-    {
-        throw new System.NotImplementedException();
-    }
-
-    
 }
