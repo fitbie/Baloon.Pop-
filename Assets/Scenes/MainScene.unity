@@ -154,6 +154,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e067b93bfbff0b843876930b23899afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health:
+    healthMin: 1
+    healthMax: 3
+  baloonsEvents:
+    onPop:
+      m_PersistentCalls:
+        m_Calls: []
+    onKill:
+      m_PersistentCalls:
+        m_Calls: []
+    onFlew:
+      m_PersistentCalls:
+        m_Calls: []
+    onDie:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!212 &180896535
 SpriteRenderer:
   m_ObjectHideFlags: 0
