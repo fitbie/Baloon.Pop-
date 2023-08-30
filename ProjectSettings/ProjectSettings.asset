@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: Alexander Kuziulenko
-  productName: Baloon.Pop!
+  productName: TapToPop
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.19215688, g: 0.47450984, b: 0.46274513, a: 1}
@@ -156,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.AlexanderKuziulenko.Baloon.Pop
+    Android: com.AlexanderKuziulenko.TapToPop
     Standalone: com.DefaultCompany.2DProject
   buildNumber:
     Standalone: 0
