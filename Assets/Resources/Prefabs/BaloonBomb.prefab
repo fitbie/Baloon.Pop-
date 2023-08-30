@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5884418549037021494}
   - component: {fileID: 5884418549037021497}
-  - component: {fileID: 7589484042042868981}
+  - component: {fileID: 4048376325791865604}
   - component: {fileID: 5884418549037021493}
   - component: {fileID: 5884418549037021495}
   - component: {fileID: 5884418549037021492}
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7589484042042868981
+--- !u!114 &4048376325791865604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,7 +95,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5884418549037021499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bc0c37bead1f174889de9268de5c5ac, type: 3}
+  m_Script: {fileID: 11500000, guid: e067b93bfbff0b843876930b23899afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speedModificator:
@@ -105,8 +105,8 @@ MonoBehaviour:
     healthMin: 1
     healthMax: 1
   scorePointsModificator:
-    scoreReward: 1
-    scorePenalty: -1
+    scoreReward: -1
+    scorePenalty: 1
   baloonsEvents:
     onPop:
       m_PersistentCalls:
