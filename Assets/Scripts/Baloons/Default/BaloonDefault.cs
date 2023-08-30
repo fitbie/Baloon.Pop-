@@ -8,7 +8,6 @@ public class BaloonDefault : BaloonBase
         
         GameScore.ModifyScore(scorePointsModificator.ScoreReward);
 
-        Vibration.Vibrate(200);
         GameObject.Destroy(gameObject);
     }
 
