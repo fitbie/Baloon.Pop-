@@ -4,7 +4,12 @@ public class PauseController : MonoBehaviour
 {
     public static bool paused = true;
 
+    private UserUIController userUI;
     
+    private void Start()
+    {
+        userUI = GameManager.Instance.userUI;    
+    }
 
     public void Pause()
     {
@@ -23,6 +28,8 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 0;
         paused = true;
+        
+        userUI.ShowPauseUI(paused);
     }
 
 
@@ -30,5 +37,7 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1;
         paused = false;
+
+        userUI.ShowPauseUI(paused);
     }
 }
