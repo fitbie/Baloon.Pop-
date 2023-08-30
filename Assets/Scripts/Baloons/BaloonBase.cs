@@ -22,13 +22,13 @@ public abstract class BaloonBase : MonoBehaviour
     }
     public SpeedModificator speedModificator;
 
-    // Yeah, i could write 1 class for Health&Speed, but i need inspector & quick access.
+    // Yeah, i could write 1 class for Health & Speed, but i need inspector & quick access.
 
     [Serializable]
     public class Health
     {
-        public int healthMin;
-        public int healthMax;
+        [SerializeField] private int healthMin;
+        [SerializeField] private int healthMax;
         public int CurrentHealth { get; set; }
 
         public void SetHealth()
@@ -37,6 +37,18 @@ public abstract class BaloonBase : MonoBehaviour
         }
     }
     public Health health;
+
+
+    [Serializable]
+    public class ScorePointsModificator
+    {
+        [SerializeField] private int scoreReward;
+        public int ScoreReward { get => scoreReward; }
+
+        [SerializeField] private int scorePenalty;
+        public int ScorePenalty { get => scorePenalty; }
+    }
+    public ScorePointsModificator scorePointsModificator;
 
 
     [Serializable]
