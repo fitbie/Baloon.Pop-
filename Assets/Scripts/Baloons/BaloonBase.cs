@@ -73,6 +73,8 @@ public abstract class BaloonBase : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (PauseController.paused) { return; }
+
         Pop();
     }
 
