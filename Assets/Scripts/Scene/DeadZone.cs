@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class DeathZone : MonoBehaviour
+public class DeadZone : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D other) 
     {
