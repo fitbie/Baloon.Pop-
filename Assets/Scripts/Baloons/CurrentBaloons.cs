@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 public class CurrentBaloons
 {
-    private static List<BaloonBase> currentBaloons = new List<BaloonBase>();
+    public static List<BaloonBase> currentBaloons = new List<BaloonBase>();
 
 
     public static void AddBaloon(BaloonBase baloon)
