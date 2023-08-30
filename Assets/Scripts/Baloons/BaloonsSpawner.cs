@@ -23,9 +23,6 @@ public class BaloonsSpawner : MonoBehaviour
     }
 
     [SerializeField] private List<BaloonSpawnParameters> baloonParams = new List<BaloonSpawnParameters>();
-
-    [Space(3)]
-    public List<BaloonBase> currentBaloons = new List<BaloonBase>();
     
 
 
@@ -37,7 +34,6 @@ public class BaloonsSpawner : MonoBehaviour
         Vector3 position = Vector3.Lerp(minSpawnpoint.position, maxSpawnpoint.position, UnityEngine.Random.value);
 
         BaloonBase newBaloon = GameObject.Instantiate(baloon, position, Quaternion.identity);
-        currentBaloons.Add(newBaloon);
     }
 
 
