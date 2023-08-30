@@ -4,12 +4,35 @@ using UnityEngine.Events;
 
 /// <summary>
 /// Base class for baloons. I don't see the point of interfaces in such a small project, plus my version of Unity doesn't have a default implementation.
+/// Also, a better solution would be to write a separate BallonType.cs with an initiating method. But - KISS.
 /// </summary>
 public abstract class BaloonBase : MonoBehaviour
 {
-    public abstract int Health { get; set; }
+    [SerializeField] protected float _speedModificator; // For inspector.
+    public float SpeedModificator 
+    {
+        get => _speedModificator;
+        set 
+        {
+            _speedModificator = value;
+        } 
+    }
 
-    public abstract float SpeedModificator { get; set; }
+
+    [Serializable]
+    public class Health
+    {
+        public int healthMin;
+        public int healthMax;
+        public int CurrentHealth { get; set; }
+
+        public void SetHealth()
+        {
+            CurrentHealth = UnityEngine.Random.Range(healthMin, healthMax);
+        }
+    }
+    public Health health;
+
 
     [Serializable]
     public class BaloonsEvents
@@ -19,22 +42,28 @@ public abstract class BaloonBase : MonoBehaviour
         public UnityEvent onFlew;
         public UnityEvent onDie;
     }
-    
     public BaloonsEvents baloonsEvents = new BaloonsEvents();
 
 
 
+    public abstract void Initialize();
 
     public void OnMouseDown()
     {
         Pop();
     }
 
-    public abstract void Pop();
+    public virtual void Pop()
+    { 
+        baloonsEvents.onPop?.Invoke();
+        
+        health.CurrentHealth--;
+        if (health.CurrentHealth <= 0) { Kill(); }
+    }
 
-    public abstract void Kill();
+    public virtual void Kill() { baloonsEvents.onKill?.Invoke(); }
 
-    public abstract void Flew();
+    public virtual void Flew() { baloonsEvents.onFlew?.Invoke(); }
 
-    public abstract void Die();
+    public virtual void Die() { baloonsEvents.onDie?.Invoke(); }
 }
