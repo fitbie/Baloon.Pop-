@@ -1,24 +1,22 @@
 using UnityEngine;
 
 
-[RequireComponent(typeof(BaloonBase), typeof(Rigidbody2D))]
+[RequireComponent(typeof(BaloonBase))]
 public class BaloonController : MonoBehaviour
 {
     private BaloonBase baloon;
-    private Rigidbody2D rb;
 
 
     private void Start()
     {
-        if (TryGetComponent<BaloonBase>(out BaloonBase _baloon) && TryGetComponent<Rigidbody2D>(out Rigidbody2D _rb))
+        if (TryGetComponent<BaloonBase>(out BaloonBase _baloon))
         {
             baloon = _baloon;
-            rb = _rb;
         }
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         Move();
     }
@@ -26,6 +24,7 @@ public class BaloonController : MonoBehaviour
 
     private void Move()
     {
-        rb.velocity = new Vector2(0, baloon.speedModificator.CurrentSpeed);
+        Vector3 velocity = new Vector3(0, baloon.speedModificator.CurrentSpeed * Time.deltaTime, 0);
+        transform.Translate(velocity);
     }
 }
