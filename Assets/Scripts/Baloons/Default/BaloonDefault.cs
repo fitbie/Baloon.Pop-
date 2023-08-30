@@ -34,8 +34,4 @@ public class BaloonDefault : BaloonBase
         GameObject.Destroy(gameObject);
     }
 
-    public override void Initialize()
-    {
-        throw new System.NotImplementedException();
-    }
 }

@@ -50,9 +50,6 @@ public abstract class BaloonBase : MonoBehaviour
     public BaloonsEvents baloonsEvents = new BaloonsEvents();
 
 
-
-    public abstract void Initialize();
-
     public void OnMouseDown()
     {
         Pop();
