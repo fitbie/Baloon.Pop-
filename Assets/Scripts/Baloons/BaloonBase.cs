@@ -62,7 +62,13 @@ public abstract class BaloonBase : MonoBehaviour
     public BaloonsEvents baloonsEvents = new BaloonsEvents();
 
 
-    public virtual void OnEnable() { CurrentBaloons.AddBaloon(this); }
+    public virtual void OnEnable() 
+    { 
+        health.SetHealth();
+        speedModificator.SetSpeed();
+
+        CurrentBaloons.AddBaloon(this);
+    }
 
 
     public void OnMouseDown()
@@ -86,5 +92,5 @@ public abstract class BaloonBase : MonoBehaviour
 
 
     public virtual void OnDisable() { CurrentBaloons.RemoveBaloon(this); }
-    
+
 }

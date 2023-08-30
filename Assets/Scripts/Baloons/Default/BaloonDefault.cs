@@ -2,13 +2,6 @@ using UnityEngine;
 
 public class BaloonDefault : BaloonBase
 {
-    public void Start()
-    {
-        health.SetHealth();
-        speedModificator.SetSpeed();
-    }
-    
-
     public override void Kill()
     {
         base.Kill();
