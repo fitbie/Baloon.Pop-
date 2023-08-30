@@ -49,23 +49,24 @@ public class BaloonsSpawner : MonoBehaviour
         // Create total chance to spawn.
         foreach (BaloonSpawnParameters baloonParam in baloonParams)
         {
-            if (baloonParam.scoreThreshold >= score)
+            if (baloonParam.scoreThreshold <= score)
             {
                 totalChance += baloonParam.chance;
             }
         }
+
 
         float randomValue = UnityEngine.Random.value;
         float accumulatedChance = 0f;
 
         foreach (BaloonSpawnParameters baloonParam in baloonParams)
         {
-            if (baloonParam.scoreThreshold >= score)
+            if (baloonParam.scoreThreshold <= score)
             {
                 float normalizedChance = baloonParam.chance / totalChance;
                 accumulatedChance += normalizedChance;
 
-                if (normalizedChance >= randomValue)
+                if (accumulatedChance >= randomValue)
                 {
                     return baloonParam.baloonType;
                 }
@@ -73,7 +74,7 @@ public class BaloonsSpawner : MonoBehaviour
         }
 
         // Default baloon
-        return baloonParams[0].baloonType;
+        return null;
     }
 
 }
