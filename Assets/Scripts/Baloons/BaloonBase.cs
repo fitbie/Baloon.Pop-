@@ -8,16 +8,21 @@ using UnityEngine.Events;
 /// </summary>
 public abstract class BaloonBase : MonoBehaviour
 {
-    [SerializeField] protected float _speedModificator; // For inspector.
-    public float SpeedModificator 
+    [Serializable]
+    public class SpeedModificator
     {
-        get => _speedModificator;
-        set 
-        {
-            _speedModificator = value;
-        } 
-    }
+        public float speedMin;
+        public float speedMax;
+        public float CurrentSpeed { get; set; }
 
+        public void SetSpeed()
+        {
+            CurrentSpeed = UnityEngine.Random.Range(speedMin, speedMax);
+        }
+    }
+    public SpeedModificator speedModificator;
+
+    // Yeah, i could write 1 class for Health&Speed, but i need inspector & quick access.
 
     [Serializable]
     public class Health
