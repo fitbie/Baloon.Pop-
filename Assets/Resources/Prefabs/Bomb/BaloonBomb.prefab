@@ -346,10 +346,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5884418549037021494}
     m_Modifications:
-    - target: {fileID: 3820383296464429260, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3820383296464429261, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
       propertyPath: m_Name
       value: ParticlesBombSparks
@@ -396,54 +392,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3820383296464429262, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: moveWithTransform
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.size3D
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.01748303
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startSizeY.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startSpeed.scalar
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: EmissionModule.rateOverTime.scalar
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startLifetime.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.startColor.maxColor.r
-      value: 0.9978298
-      objectReference: {fileID: 0}
-    - target: {fileID: 3820383296464429263, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
-      propertyPath: InitialModule.gravityModifier.scalar
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
