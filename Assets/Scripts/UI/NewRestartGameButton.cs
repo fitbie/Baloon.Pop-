@@ -15,6 +15,6 @@ public class NewRestartGameButton : MonoBehaviour
 
     private void NewGame()
     {
-        GameManager.Instance.gameState.NewGame();
+        GameState.NewGame();
     }
 }

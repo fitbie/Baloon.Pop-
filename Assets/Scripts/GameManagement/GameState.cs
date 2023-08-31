@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class GameState : MonoBehaviour
 {
-    public void NewGame()
+    public static void NewGame()
     {
         GameScore.ResetScore();
         CurrentBaloons.ResetBaloons();
@@ -13,9 +13,11 @@ public class GameState : MonoBehaviour
     }
 
 
-    public void GameOver()
+    public static void GameOver()
     {
         PauseController.Pause(true);
+
+        GameManager.Instance.leaderBoard.leaderBoardUI.ShowInputField();
     }
 
 
