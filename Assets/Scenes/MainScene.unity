@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lowerTimer: 1
-  upperTimer: 3
+  upperTimer: 2
 --- !u!1 &2057055474
 GameObject:
   m_ObjectHideFlags: 0
