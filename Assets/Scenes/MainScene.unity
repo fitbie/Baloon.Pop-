@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baloonsSpawner: {fileID: 2004758966}
   userUI: {fileID: 218080071}
-  cinemachineController: {fileID: 0}
+  cinemachineController: {fileID: 2057055477}
 --- !u!4 &603260403
 Transform:
   m_ObjectHideFlags: 0
