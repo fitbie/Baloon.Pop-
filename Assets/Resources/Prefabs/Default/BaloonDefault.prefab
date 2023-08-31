@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 7894426271017204629}
   - component: {fileID: 7894426271017204632}
   - component: {fileID: 6538150030804356518}
+  - component: {fileID: 8949710031609503689}
   m_Layer: 0
   m_Name: BaloonDefault
   m_TagString: Untagged
@@ -332,3 +333,18 @@ PolygonCollider2D:
       - {x: 0.51600003, y: 0.64000005}
       - {x: 0.296, y: 0.924}
       - {x: 0, y: 1.024}
+--- !u!114 &8949710031609503689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894426271017204630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f61d5b978823a4d8a3744280feeb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToOnPopEvent: 1
+  scaleFactor: 1.3
+  scaleTime: 0.2
