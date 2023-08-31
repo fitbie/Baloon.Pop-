@@ -74,6 +74,7 @@ public class LeaderBoardController : MonoBehaviour
         string jsonPlayerScores = PlayerPrefs.GetString(key);
 
         SaveData data = JsonUtility.FromJson<SaveData>(jsonPlayerScores); 
+        if (data == null) { return; }
         
         playerScores.AddRange(data.playerScores);
     }
