@@ -14,4 +14,10 @@ public class CurrentBaloons
     {
         currentBaloons.Remove(baloon);
     }
+
+
+    public static void ResetBaloons()
+    {
+        currentBaloons.Clear();
+    }
 }
