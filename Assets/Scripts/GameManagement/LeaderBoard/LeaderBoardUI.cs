@@ -6,6 +6,7 @@ public class LeaderBoardUI : MonoBehaviour
 {
     [Header("UI Gameobjects")]
     [SerializeField] private GameObject leaderboardPanel;
+    [SerializeField] private GameObject inputField;
     [SerializeField] private Transform content; // Parent with Vertical Layout Group.
 
     [Space(3)]
@@ -43,6 +44,21 @@ public class LeaderBoardUI : MonoBehaviour
             currentLeaders.Add(leader);
 
         }
+    }
+
+
+    public void ShowInputField()
+    {
+        inputField.SetActive(true);
+    }
+
+
+    // Called from inspector input field. TODO.
+    public void InputName(string name)
+    {
+        leaderBoard.AddLeader(name, GameScore.Score);
+
+        OpenLeaderBoard();
     }
 
     
