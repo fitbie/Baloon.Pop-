@@ -6,11 +6,9 @@ public class PauseController : MonoBehaviour
 
     private UserUIController userUI;
     
-    private void Start()
-    {
-        userUI = GameManager.Instance.userUI;    
-    }
 
+
+    // Called from inspector Pause/Continue buttons on UserUI.
     public void Pause()
     {
         if(paused)
@@ -28,8 +26,6 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 0;
         paused = true;
-        
-        userUI.ShowPauseUI(paused);
     }
 
 
@@ -37,7 +33,5 @@ public class PauseController : MonoBehaviour
     {
         Time.timeScale = 1;
         paused = false;
-
-        userUI.ShowPauseUI(paused);
     }
 }

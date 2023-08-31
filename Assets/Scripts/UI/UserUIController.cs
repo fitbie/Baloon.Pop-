@@ -10,6 +10,7 @@ public class UserUIController : MonoBehaviour
     [SerializeField] private GameObject pausePanel;
 
 
+    // Called from inspector Pause/Continue buttons on UserUI.
     public void ShowPauseUI(bool state)
     {
         pauseButton.interactable = !state;
