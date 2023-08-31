@@ -16,6 +16,6 @@ public class GameScore
 
     public static void ResetScore()
     {
-        Score = 0;
+        ModifyScore(-Score);
     }
 }
