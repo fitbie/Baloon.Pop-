@@ -13,7 +13,7 @@ public class UserUIController : MonoBehaviour
     // Called from inspector Pause/Continue buttons on UserUI.
     public void ShowPauseUI(bool state)
     {
-        pauseButton.interactable = !state;
-        pausePanel.SetActive(state);
+        if (pauseButton.interactable == state) { pauseButton.interactable = !state; } // button interactable should be opposite to pause state 
+        if (pausePanel.activeSelf != state) { pausePanel.SetActive(state); }
     }
 }
