@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PauseController
 {
-    public static bool paused = true;    
+    public static bool paused { get; private set; } = true;    
 
 
     public static void Pause(bool pauseGame)
