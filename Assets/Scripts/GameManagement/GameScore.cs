@@ -8,8 +8,14 @@ public class GameScore
         Score += value;
 
         GameManager gameManager = GameManager.Instance;
-        if (Score < 0) { gameManager.GameOver(); }
+        if (Score < 0) { gameManager.gameState.GameOver(); }
 
         gameManager.userUI.scoreUI.UpdateScoreText(Score);
+    }
+
+
+    public static void ResetScore()
+    {
+        Score = 0;
     }
 }
