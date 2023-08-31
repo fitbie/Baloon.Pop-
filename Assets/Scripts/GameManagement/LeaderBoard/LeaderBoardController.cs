@@ -1,4 +1,3 @@
-using System.Data;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -7,6 +6,8 @@ using System.Linq; // I know you expect OrderBy() :)
 
 public class LeaderBoardController : MonoBehaviour
 {
+    public LeaderBoardUI leaderBoardUI;
+
     [Serializable]
     public class PlayerScore
     {
