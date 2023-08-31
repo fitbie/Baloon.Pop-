@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEngine;
 
 public class CurrentBaloons
 {
@@ -18,6 +19,11 @@ public class CurrentBaloons
 
     public static void ResetBaloons()
     {
+        for (int i = currentBaloons.Count-1; i >= 0; i--)
+        {
+            GameObject.Destroy(currentBaloons[i].gameObject);
+        }
+
         currentBaloons.Clear();
     }
 }
