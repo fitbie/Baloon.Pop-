@@ -24,5 +24,8 @@ public class GameManager : MonoBehaviour
     #endregion
 
 
+    public GameState gameState;
     public BaloonsSpawner baloonsSpawner;
+    public UserUIController userUI;
+    public CinemachineController cinemachineController;
 }
