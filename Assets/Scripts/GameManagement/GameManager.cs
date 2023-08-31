@@ -28,4 +28,5 @@ public class GameManager : MonoBehaviour
     public BaloonsSpawner baloonsSpawner;
     public UserUIController userUI;
     public CinemachineController cinemachineController;
+    public LeaderBoardController leaderBoard;
 }
