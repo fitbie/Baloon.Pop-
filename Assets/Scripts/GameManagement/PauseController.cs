@@ -5,30 +5,9 @@ public class PauseController
     public static bool paused = true;    
 
 
-    // Called from inspector Pause/Continue buttons on UserUI.
-    public static void Pause()
+    public static void Pause(bool pauseGame)
     {
-        if(paused)
-        {
-            SetUnpause();
-        }
-        else
-        {
-            SetPause();
-        }
-    }
-
-
-    private static void SetPause()
-    {
-        Time.timeScale = 0;
-        paused = true;
-    }
-
-
-    private static void SetUnpause()
-    {
-        Time.timeScale = 1;
-        paused = false;
+        PauseController.paused = pauseGame;
+        Time.timeScale = pauseGame ? 0 : 1;
     }
 }
