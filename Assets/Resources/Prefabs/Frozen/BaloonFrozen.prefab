@@ -126,6 +126,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ms: 200
+--- !u!1 &7177949760899186250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3671752076567840809}
+  - component: {fileID: 6425517401376731081}
+  m_Layer: 0
+  m_Name: ParticlesSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3671752076567840809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177949760899186250}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7894426271017204635}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6425517401376731081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7177949760899186250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110e74c7efc8bab42bf5fcc4b8edca69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  partyiclesToSpawn:
+  - {fileID: 3820383296464429263, guid: a436b3a67d4ec6b48adde5dd33caaa1f, type: 3}
 --- !u!1 &7894426271017204630
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +206,8 @@ Transform:
   - {fileID: 1654787365392092893}
   - {fileID: 5693249096099700615}
   - {fileID: 8672727664172224035}
+  - {fileID: 3671752076567840809}
+  - {fileID: 8173403602922583003}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -195,6 +242,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1881768470824822664}
           m_TargetAssemblyTypeName: CallVibration, Assembly-CSharp
           m_MethodName: Vibrate
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 6425517401376731081}
+          m_TargetAssemblyTypeName: PSSpawner, Assembly-CSharp
+          m_MethodName: SpawnParticles
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -339,3 +398,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ms: 200
+--- !u!1001 &4929604412688569109
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7894426271017204635}
+    m_Modifications:
+    - target: {fileID: 3820383296464429261, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_Name
+      value: ParticlesFrozenSmokeTrail
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+--- !u!4 &8173403602922583003 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3820383296464429262, guid: f26d1418c6621c741acc866762fd4723, type: 3}
+  m_PrefabInstance: {fileID: 4929604412688569109}
+  m_PrefabAsset: {fileID: 0}
