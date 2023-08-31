@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 8605582477023458812}
   - component: {fileID: 8370440932324300364}
   - component: {fileID: 7894426271017204633}
+  - component: {fileID: 5384392626440340529}
   m_Layer: 0
   m_Name: BaloonBull
   m_TagString: Untagged
@@ -327,6 +328,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5384392626440340529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894426271017204630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f61d5b978823a4d8a3744280feeb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToOnPopEvent: 1
+  scaleFactor: 0.9
+  scaleTime: 0.2
 --- !u!1 &9208131424812596684
 GameObject:
   m_ObjectHideFlags: 0

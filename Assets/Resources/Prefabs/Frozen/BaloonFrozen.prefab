@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 7894426271017204632}
   - component: {fileID: 562887338448968270}
   - component: {fileID: 8917061137625078954}
+  - component: {fileID: 1549418122756867323}
   m_Layer: 0
   m_Name: BaloonFrozen
   m_TagString: Untagged
@@ -279,6 +280,21 @@ PolygonCollider2D:
       - {x: 0.51600003, y: 0.21200001}
       - {x: 0.51600003, y: 0.564}
       - {x: 0.37600002, y: 0.84800005}
+--- !u!114 &1549418122756867323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7894426271017204630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f61d5b978823a4d8a3744280feeb3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoConnectToOnPopEvent: 1
+  scaleFactor: 1.3
+  scaleTime: 0.2
 --- !u!1 &8673728891753896890
 GameObject:
   m_ObjectHideFlags: 0
