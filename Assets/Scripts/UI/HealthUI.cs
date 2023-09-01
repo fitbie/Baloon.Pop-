@@ -9,6 +9,12 @@ public class HealthUI : MonoBehaviour
 
     private void Start()
     {
+        Initialize();
+    }
+
+
+    public void Initialize()
+    {
         int health = GameHealth.MaxHealth;
 
         for (int i = 0; i < health; i++)
@@ -19,7 +25,7 @@ public class HealthUI : MonoBehaviour
     }
 
 
-    public void RemoveHearts(int amount)
+    public void ChangeHearts(int amount)
     {
        if (amount <= 0 || amount > hearts.Count)
         {
@@ -34,5 +40,16 @@ public class HealthUI : MonoBehaviour
             hearts.RemoveAt(lastIndex);
             Destroy(heartToRemove);
         }
+    }
+
+
+    public void ResetHealthUI()
+    {
+        foreach (GameObject go in hearts)
+        {
+            GameObject.Destroy(go);
+        }
+
+        Initialize();
     }
 }

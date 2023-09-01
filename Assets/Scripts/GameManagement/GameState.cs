@@ -6,6 +6,7 @@ public class GameState : MonoBehaviour
     {
         GameScore.ResetScore();
         CurrentBaloons.ResetBaloons();
+        GameHealth.ResetHealth();
 
         PauseController.Pause(false);
 
@@ -17,7 +18,10 @@ public class GameState : MonoBehaviour
     {
         PauseController.Pause(true);
 
-        GameManager.Instance.leaderBoard.leaderBoardUI.ShowInputField();
+        GameManager gameManager = GameManager.Instance;
+
+
+        gameManager.leaderBoard.leaderBoardUI.ShowInputField();
     }
 
 
