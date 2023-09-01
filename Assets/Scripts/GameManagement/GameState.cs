@@ -4,7 +4,9 @@ public class GameState : MonoBehaviour
 {
     public static void NewGame()
     {
-        ResetGame();
+        GameScore.ResetScore();
+        CurrentBaloons.ResetBaloons();
+        GameHealth.ResetHealth();
 
         PauseController.Pause(false);
 
@@ -12,18 +14,11 @@ public class GameState : MonoBehaviour
     }
 
 
-    public static void ResetGame()
-    {
-        GameScore.ResetScore();
-        CurrentBaloons.ResetBaloons();
-        GameHealth.ResetHealth();
-    }
-
-
     public static void GameOver()
     {
         PauseController.Pause(true);
-        ResetGame();
+        CurrentBaloons.ResetBaloons();
+        GameHealth.ResetHealth();
         
         GameManager gameManager = GameManager.Instance;
         gameManager.userUI.ShowPauseUI(true);
