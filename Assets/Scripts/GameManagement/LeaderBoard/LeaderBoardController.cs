@@ -1,3 +1,4 @@
+using System.Globalization;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -33,7 +34,11 @@ public class LeaderBoardController : MonoBehaviour
     private void Initialize()
     {
         LoadLeaders();
+    }
 
+
+    private void SortLeaders()
+    {
         playerScores.Sort((a, b) => b.score.CompareTo(a.score));
     }
 
@@ -42,7 +47,8 @@ public class LeaderBoardController : MonoBehaviour
     {
         PlayerScore playerScore = new PlayerScore(name, score);
         playerScores.Add(playerScore);
-
+        
+        SortLeaders();
         SaveLeaders();
     }
 
