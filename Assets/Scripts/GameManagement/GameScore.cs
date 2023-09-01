@@ -7,10 +7,7 @@ public class GameScore
     {
         Score += value;
 
-        GameManager gameManager = GameManager.Instance;
-        if (Score < 0) { GameState.GameOver(); }
-
-        gameManager.userUI.scoreUI.UpdateScoreText(Score);
+        GameManager.Instance.userUI.scoreUI.UpdateScoreText(Score);
     }
 
 

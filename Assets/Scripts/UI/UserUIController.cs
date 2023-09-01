@@ -4,6 +4,7 @@ using UnityEngine.UI;
 public class UserUIController : MonoBehaviour
 {
     public ScoreUI scoreUI;
+    public HealthUI healthUI;
     
     [Space(3)]
     [SerializeField] private Button pauseButton;
