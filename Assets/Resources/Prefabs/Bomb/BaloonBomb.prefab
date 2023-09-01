@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5884418549037021494}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4175266581873630589
 MonoBehaviour:
@@ -74,7 +74,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5884418549037021494}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5353157945369813551
 SpriteRenderer:
@@ -178,6 +178,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2591733589150907590}
   - {fileID: 1515052660111349182}
   - {fileID: 8060877016693212794}
   - {fileID: 5296284616313215005}
@@ -203,9 +204,6 @@ MonoBehaviour:
   health:
     healthMin: 1
     healthMax: 1
-  scorePointsModificator:
-    scoreReward: -1
-    scorePenalty: 1
   baloonsEvents:
     onPop:
       m_PersistentCalls:
@@ -237,12 +235,36 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 509760059035079384}
+          m_TargetAssemblyTypeName: ModifyHealth, Assembly-CSharp
+          m_MethodName: ChangeHealth
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
     onFlew:
       m_PersistentCalls:
         m_Calls: []
     onDie:
       m_PersistentCalls:
-        m_Calls: []
+        m_Calls:
+        - m_Target: {fileID: 4134684711945436592}
+          m_TargetAssemblyTypeName: ModifyScore, Assembly-CSharp
+          m_MethodName: ChangeScore
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &5884418549037021493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +345,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5884418549037021494}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3144631591207429202
 MonoBehaviour:
@@ -339,6 +361,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   partyiclesToSpawn:
   - {fileID: 3820383296464429263, guid: 008fb9394fd711747b5114b7e845414b, type: 3}
+--- !u!1 &8320738062119321254
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2591733589150907590}
+  - component: {fileID: 509760059035079384}
+  - component: {fileID: 4134684711945436592}
+  m_Layer: 0
+  m_Name: ChangeHealthAndScore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2591733589150907590
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320738062119321254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5884418549037021494}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &509760059035079384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320738062119321254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91ee5cb9cc8aeb1498116d8be42b144b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueToChange: -1
+--- !u!114 &4134684711945436592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8320738062119321254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff760b2e43db92a4d8862775312f558d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueToChange: 1
 --- !u!1001 &72949644
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -352,7 +432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3820383296464429262, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3820383296464429262, guid: c82fe0f09605b7f4a8fef3ce2eedefaf, type: 3}
       propertyPath: m_LocalPosition.x

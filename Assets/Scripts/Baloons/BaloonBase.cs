@@ -39,17 +39,6 @@ public abstract class BaloonBase : MonoBehaviour
     public Health health;
 
 
-    [Serializable]
-    public class ScorePointsModificator
-    {
-        [SerializeField] private int scoreReward;
-        public int ScoreReward { get => scoreReward; }
-
-        [SerializeField] private int scorePenalty;
-        public int ScorePenalty { get => scorePenalty; }
-    }
-    public ScorePointsModificator scorePointsModificator;
-
 
     [Serializable]
     public class BaloonsEvents

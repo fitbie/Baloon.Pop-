@@ -5,8 +5,6 @@ public class BaloonDefault : BaloonBase
     public override void Kill()
     {
         base.Kill();
-        
-        GameScore.ModifyScore(scorePointsModificator.ScoreReward);
 
         GameObject.Destroy(gameObject);
     }
@@ -24,8 +22,6 @@ public class BaloonDefault : BaloonBase
     {
         base.Die();
         
-        GameScore.ModifyScore(scorePointsModificator.ScorePenalty);
-
         GameObject.Destroy(gameObject);
     }
 
