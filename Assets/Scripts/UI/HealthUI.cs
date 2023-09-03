@@ -7,8 +7,14 @@ public class HealthUI : MonoBehaviour
     [SerializeField] private List<GameObject> hearts = new List<GameObject>();
 
 
-    private void Start()
+
+    public void ResetHealthUI()
     {
+        foreach (GameObject go in hearts)
+        {
+            GameObject.Destroy(go);
+        }
+
         Initialize();
     }
 
@@ -42,14 +48,4 @@ public class HealthUI : MonoBehaviour
         }
     }
 
-
-    public void ResetHealthUI()
-    {
-        foreach (GameObject go in hearts)
-        {
-            GameObject.Destroy(go);
-        }
-
-        Initialize();
-    }
 }
