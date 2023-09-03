@@ -10,14 +10,7 @@ public class PauseContinueButton : MonoBehaviour
     public enum ButtonType { Pause, Continue }
     [SerializeField] private ButtonType buttonType;
 
-
-    private Button button;
-
-    private void Start()
-    {
-        button = GetComponent<Button>();
-        button.onClick.AddListener(CallPauseController);
-    }
+    [SerializeField] private Button button;
 
 
     public void CallPauseController()
