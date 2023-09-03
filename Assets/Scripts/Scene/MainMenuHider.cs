@@ -9,13 +9,20 @@ using UnityEngine.UI;
 public class MainMenuHider : MonoBehaviour
 {
     [SerializeField] private GameObject useruiMainPanel;
+    [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private Button newGameButton;
     [SerializeField] private Animator animator;
 
     void Start()
     {
-        useruiMainPanel.SetActive(false);
+        HideUserUI();
         newGameButton.onClick.AddListener(NewGameUISetup);
+    }
+
+    public void HideUserUI()
+    {
+        mainMenuPanel.SetActive(true);
+        useruiMainPanel.SetActive(false);
     }
 
     private void NewGameUISetup()
@@ -29,6 +36,6 @@ public class MainMenuHider : MonoBehaviour
     // Called from animator
     public void Deactivate()
     {
-        gameObject.SetActive(false);
+        mainMenuPanel.SetActive(false);
     }
 }
